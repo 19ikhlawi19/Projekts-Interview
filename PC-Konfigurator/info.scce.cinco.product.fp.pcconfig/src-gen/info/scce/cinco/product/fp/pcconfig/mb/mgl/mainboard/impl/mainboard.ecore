@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mainboard" nsURI="http://cinco.scce.info/product/fp/pcconfig/mb/mgl"
+    nsPrefix="mainboard">
+  <eClassifiers xsi:type="ecore:EClass" name="MainboardContainer" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Container">
+    <eOperations name="getNumPCIe16Slots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setNumPCIe16Slots">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setPowerConsumption">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getFormFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setFormFactor">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eOperations name="setPrice">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eOperations name="getNumSataPorts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setNumSataPorts">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setName">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getSocket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setSocket">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getChipset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setChipset">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getTypeMemorySlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setTypeMemorySlots">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getNumMemorySlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setNumMemorySlots">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getInternalMainboardContainer" eType="#//internal/InternalMainboardContainer"/>
+    <eOperations name="isExactlyMainboardContainer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="getNodes" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments>
+          <eUpperBound eClassifier="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Node"/>
+        </eTypeArguments>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getGPUSlots" upperBound="-1" eType="#//GPUSlot"/>
+    <eOperations name="canNewGPUSlot" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newGPUSlot" lowerBound="1" eType="#//GPUSlot">
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newGPUSlot" lowerBound="1" eType="#//GPUSlot">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newGPUSlot" lowerBound="1" eType="#//GPUSlot">
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newGPUSlot" lowerBound="1" eType="#//GPUSlot">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getCPUSlots" upperBound="-1" eType="#//CPUSlot"/>
+    <eOperations name="canNewCPUSlot" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newCPUSlot" lowerBound="1" eType="#//CPUSlot">
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newCPUSlot" lowerBound="1" eType="#//CPUSlot">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newCPUSlot" lowerBound="1" eType="#//CPUSlot">
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newCPUSlot" lowerBound="1" eType="#//CPUSlot">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getRAMSlots" upperBound="-1" eType="#//RAMSlot"/>
+    <eOperations name="canNewRAMSlot" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newRAMSlot" lowerBound="1" eType="#//RAMSlot">
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newRAMSlot" lowerBound="1" eType="#//RAMSlot">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newRAMSlot" lowerBound="1" eType="#//RAMSlot">
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newRAMSlot" lowerBound="1" eType="#//RAMSlot">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="mainboard" lowerBound="1" eType="#//Mainboard"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="mainboard" lowerBound="1" eType="#//Mainboard"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="mainboard" lowerBound="1" eType="#//Mainboard"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//Mainboard"/>
+    <eOperations name="getReferencedMB" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eOperations name="getLibraryComponentUID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setLibraryComponentUID" lowerBound="1">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getMainboardContainerView" eType="#//views/MainboardContainerView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CPUSlot" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Container">
+    <eOperations name="getSocket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setSocket">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getInternalCPUSlot" eType="#//internal/InternalCPUSlot"/>
+    <eOperations name="isExactlyCPUSlot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="getNodes" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments>
+          <eUpperBound eClassifier="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Node"/>
+        </eTypeArguments>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getCPUNodes" upperBound="-1" eType="#//CPUNode"/>
+    <eOperations name="canNewCPUNode" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newCPUNode" lowerBound="1" eType="#//CPUNode">
+      <eParameters name="referencedCPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newCPUNode" lowerBound="1" eType="#//CPUNode">
+      <eParameters name="referencedCPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newCPUNode" lowerBound="1" eType="#//CPUNode">
+      <eParameters name="referencedCPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newCPUNode" lowerBound="1" eType="#//CPUNode">
+      <eParameters name="referencedCPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//MainboardContainer"/>
+    <eOperations name="getCPUSlotView" eType="#//views/CPUSlotView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAMSlot" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Container">
+    <eOperations name="getRamType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setRamType">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getInternalRAMSlot" eType="#//internal/InternalRAMSlot"/>
+    <eOperations name="isExactlyRAMSlot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="getNodes" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments>
+          <eUpperBound eClassifier="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Node"/>
+        </eTypeArguments>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getRAMNodes" upperBound="-1" eType="#//RAMNode"/>
+    <eOperations name="canNewRAMNode" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newRAMNode" lowerBound="1" eType="#//RAMNode">
+      <eParameters name="referencedRAM" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newRAMNode" lowerBound="1" eType="#//RAMNode">
+      <eParameters name="referencedRAM" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newRAMNode" lowerBound="1" eType="#//RAMNode">
+      <eParameters name="referencedRAM" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newRAMNode" lowerBound="1" eType="#//RAMNode">
+      <eParameters name="referencedRAM" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//MainboardContainer"/>
+    <eOperations name="getRAMSlotView" eType="#//views/RAMSlotView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPUSlot" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Container">
+    <eOperations name="getInternalGPUSlot" eType="#//internal/InternalGPUSlot"/>
+    <eOperations name="isExactlyGPUSlot" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="getNodes" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments>
+          <eUpperBound eClassifier="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Node"/>
+        </eTypeArguments>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getGPUNodes" upperBound="-1" eType="#//GPUNode"/>
+    <eOperations name="canNewGPUNode" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newGPUNode" lowerBound="1" eType="#//GPUNode">
+      <eParameters name="referencedGPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newGPUNode" lowerBound="1" eType="#//GPUNode">
+      <eParameters name="referencedGPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newGPUNode" lowerBound="1" eType="#//GPUNode">
+      <eParameters name="referencedGPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newGPUNode" lowerBound="1" eType="#//GPUNode">
+      <eParameters name="referencedGPU" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="mainboardContainer" lowerBound="1" eType="#//MainboardContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//MainboardContainer"/>
+    <eOperations name="getGPUSlotView" eType="#//views/GPUSlotView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CPUNode" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Node">
+    <eOperations name="getCpuType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setCpuType">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setPowerConsumption">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eOperations name="setPrice">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setName">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getSocket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setSocket">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getInternalCPUNode" eType="#//internal/InternalCPUNode"/>
+    <eOperations name="isExactlyCPUNode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="cPUSlot" lowerBound="1" eType="#//CPUSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="cPUSlot" lowerBound="1" eType="#//CPUSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="cPUSlot" lowerBound="1" eType="#//CPUSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//CPUSlot"/>
+    <eOperations name="getReferencedCPU" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eOperations name="getLibraryComponentUID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setLibraryComponentUID" lowerBound="1">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getCPUNodeView" eType="#//views/CPUNodeView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RAMNode" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Node">
+    <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setPowerConsumption">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eOperations name="setPrice">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setName">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getRamType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setRamType">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setCapacity">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getInternalRAMNode" eType="#//internal/InternalRAMNode"/>
+    <eOperations name="isExactlyRAMNode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="rAMSlot" lowerBound="1" eType="#//RAMSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="rAMSlot" lowerBound="1" eType="#//RAMSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="rAMSlot" lowerBound="1" eType="#//RAMSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//RAMSlot"/>
+    <eOperations name="getReferencedRAM" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eOperations name="getLibraryComponentUID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setLibraryComponentUID" lowerBound="1">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getRAMNodeView" eType="#//views/RAMNodeView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPUNode" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//Node">
+    <eOperations name="getChip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setChip">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getMemory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setMemory">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="setPowerConsumption">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eOperations name="setPrice">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eOperations>
+    <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setName">
+      <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getInternalGPUNode" eType="#//internal/InternalGPUNode"/>
+    <eOperations name="isExactlyGPUNode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="container" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preMove" lowerBound="1">
+      <eParameters name="newContainer" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="postMove" lowerBound="1">
+      <eParameters name="source" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="target" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ModelElementContainer"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="deltaY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="preResize" lowerBound="1">
+      <eParameters name="newWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="newY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="postResize" lowerBound="1">
+      <eParameters name="oldWidth" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldHeight" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="oldY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="direction" lowerBound="1" eType="ecore:EEnum http://www.jabc.de/cinco/gdl/graphmodel#//Direction"/>
+    </eOperations>
+    <eOperations name="canMoveTo" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="gPUSlot" lowerBound="1" eType="#//GPUSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="moveTo" lowerBound="1">
+      <eParameters name="gPUSlot" lowerBound="1" eType="#//GPUSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="s_moveTo" lowerBound="1">
+      <eParameters name="gPUSlot" lowerBound="1" eType="#//GPUSlot"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="getContainer" eType="#//GPUSlot"/>
+    <eOperations name="getReferencedGPU" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eOperations name="getLibraryComponentUID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="setLibraryComponentUID" lowerBound="1">
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="getGPUNodeView" eType="#//views/GPUNodeView"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mainboard" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//GraphModel">
+    <eOperations name="getInternalMainboard" eType="#//internal/InternalMainboard"/>
+    <eOperations name="isExactlyMainboard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="preDelete" lowerBound="1"/>
+    <eOperations name="getPostDeleteFunction" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="getPostDeleteEvent" lowerBound="1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Runnable"/>
+    <eOperations name="preSave" lowerBound="1"/>
+    <eOperations name="postSave" lowerBound="1"/>
+    <eOperations name="getRootElement" eType="#//Mainboard"/>
+    <eOperations name="getNodes" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments>
+          <eUpperBound eClassifier="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//Node"/>
+        </eTypeArguments>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getMainboardContainers" upperBound="-1" eType="#//MainboardContainer"/>
+    <eOperations name="canNewMainboardContainer" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="newMainboardContainer" lowerBound="1" eType="#//MainboardContainer">
+      <eParameters name="referencedMB" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newMainboardContainer" lowerBound="1" eType="#//MainboardContainer">
+      <eParameters name="referencedMB" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newMainboardContainer" lowerBound="1" eType="#//MainboardContainer">
+      <eParameters name="referencedMB" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newMainboardContainer" lowerBound="1" eType="#//MainboardContainer">
+      <eParameters name="referencedMB" lowerBound="1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eParameters name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eParameters name="height" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
+    <eOperations name="newMainboard" lowerBound="1" eType="#//Mainboard">
+      <eParameters name="path" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="fileName" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eParameters name="postCreateHook" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eOperations>
+    <eOperations name="getMainboardView" eType="#//views/MainboardView"/>
+  </eClassifiers>
+  <eSubpackages name="internal" nsURI="http://cinco.scce.info/product/fp/pcconfig/mb/mgl/internal"
+      nsPrefix="mainboard-internal">
+    <eClassifiers xsi:type="ecore:EClass" name="InternalMainboardContainer" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalContainer">
+      <eOperations name="getContainmentConstraints" upperBound="-1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ContainmentConstraint"/>
+      <eOperations name="getReferencedMB" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numPCIe16Slots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="formFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numSataPorts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="socket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="chipset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeMemorySlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numMemorySlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="libraryComponentUID"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalCPUSlot" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalContainer">
+      <eOperations name="getContainmentConstraints" upperBound="-1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ContainmentConstraint"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="socket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalRAMSlot" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalContainer">
+      <eOperations name="getContainmentConstraints" upperBound="-1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ContainmentConstraint"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ramType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalGPUSlot" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalContainer">
+      <eOperations name="getContainmentConstraints" upperBound="-1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ContainmentConstraint"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalCPUNode" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalNode">
+      <eOperations name="getReferencedCPU" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cpuType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="socket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="libraryComponentUID"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalRAMNode" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalNode">
+      <eOperations name="getReferencedRAM" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="ramType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="libraryComponentUID"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalGPUNode" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalNode">
+      <eOperations name="getReferencedGPU" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="chip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="memory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="powerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="libraryComponentUID"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalMainboard" eSuperTypes="http://www.jabc.de/cinco/gdl/graphmodel#//internal/InternalGraphModel">
+      <eOperations name="getContainmentConstraints" upperBound="-1" eType="ecore:EClass http://www.jabc.de/cinco/gdl/graphmodel#//ContainmentConstraint"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="views" nsURI="http://cinco.scce.info/product/fp/pcconfig/mb/mgl/views"
+      nsPrefix="mainboard-views">
+    <eClassifiers xsi:type="ecore:EClass" name="MainboardContainerView">
+      <eOperations name="getNumPCIe16Slots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setNumPCIe16Slots">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setPowerConsumption">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getFormFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setFormFactor">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eOperations name="setPrice">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </eOperations>
+      <eOperations name="getNumSataPorts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setNumSataPorts">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getSocket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setSocket">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getChipset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setChipset">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getTypeMemorySlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setTypeMemorySlots">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getNumMemorySlots" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setNumMemorySlots">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalMainboardContainer"
+          eType="#//internal/InternalMainboardContainer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CPUSlotView">
+      <eOperations name="getSocket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setSocket">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalCPUSlot" eType="#//internal/InternalCPUSlot"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RAMSlotView">
+      <eOperations name="getRamType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setRamType">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalRAMSlot" eType="#//internal/InternalRAMSlot"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GPUSlotView">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalGPUSlot" eType="#//internal/InternalGPUSlot"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CPUNodeView">
+      <eOperations name="getCpuType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setCpuType">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setPowerConsumption">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eOperations name="setPrice">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </eOperations>
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getSocket" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setSocket">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalCPUNode" eType="#//internal/InternalCPUNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RAMNodeView">
+      <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setPowerConsumption">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eOperations name="setPrice">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </eOperations>
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getRamType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setRamType">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setCapacity">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalRAMNode" eType="#//internal/InternalRAMNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GPUNodeView">
+      <eOperations name="getChip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setChip">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eOperations name="getMemory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setMemory">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getPowerConsumption" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eOperations name="setPowerConsumption">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eOperations>
+      <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eOperations name="setPrice">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </eOperations>
+      <eOperations name="getName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eOperations name="setName">
+        <eParameters name="_arg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eOperations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalGPUNode" eType="#//internal/InternalGPUNode"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MainboardView">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="internalMainboard" eType="#//internal/InternalMainboard"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
